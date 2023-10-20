@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Survey Form</title>
+	<link rel="stylesheet" type="text/css" href="SurveyForm.css">
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<h1 id="title">SURVEY FORM</h1>
+		</header>
+		<form action="" id="survey-form">
+			<div class="form-group">
+				<label for="name">FIRST NAME</label>
+				<input type="text" name="fname" id="firstname" class="formControl" placeholder="First Name" required>
+			</div>
+			<div class="form-group">
+				<label for="">LAST NAME</label>
+				<input type="text" name="lname" id="lastname" class="formControl" placeholder="Last Name" required>
+			</div>
+			<div class="form-group">
+				<label for="birthdate">DATE OF BIRTH</label>
+				<input type="date" name="birthdate" id="birthdate" class="formControl" placeholder="Date of birth" required>
+			</div>
+			<div class="form-group">
+				<label for="country">COUNTRY</label>
+				<select id="country" name="country">
+                        <option disabled selected>--Choose Country--</option>
+                                <option>India</option>
+                                <option>Bangladesh</option>
+                                <option>South Korea</option>
+                                <option>Japan</option>
+                                <option>America</option>
+                                <option>US</option>
+                                <option>Others</option>
+                      </select>
+			</div>
+			<div class="form-group">
+			     <label for="gender">GENDER</label>
+			     <label for="">
+			     	<input type="checkbox" name="source" value="male" class="checkbox">Male
+			     </label>
+			     <label for="">
+			     	<input type="checkbox" name="source" value="fmale" class="checkbox">Female
+			     </label>
+			     <label for="">
+			     	<input type="checkbox" name="source" value="other" class="checkbox">Others
+			     </label>
+				
+			</div>
+			<div class="form-group">
+				<label for="">PROFESSION</label>
+				<input type="text" name="profession" id="profession" class="formControl" placeholder="Profession" required>
+			</div>
+			<div class="form-group">
+				<label for="">EMAIL</label>
+				<input type="email" name="email" id="email" class="formControl" placeholder="Email-address" required>
+			</div>
+			<div class="form-group">
+				<label for="">MOBILE NUMBER</label>
+				<input type="number" name="mobileno" id="mobileno" class="formControl" placeholder="Mobile number" required>
+			</div>
+			<div class="form-group">
+				<button type="submit" id="submit" class="btn" onclick="openPopup()">SUBMIT</button>
+				<div class="popup" id="popup"><h2>Thank You!</h2></div>
+				
+			</div>
+			<div class="form-group">
+			<button type="reset" id="reset" class="btn">RESET</button>
+            </div>
+
+            <div class="form-group">
+            	<button type="button" onclick="closePopup()">OK</button>
+            </div>
+
+		</form>
+		
+	</div>
+	<script >
+		let popup=document.getElementById("popup");
+
+		function openPopup()
+		{
+			popup.classList.add("open-popup");
+		}
+		function closePopup()
+		{
+			popup.classList.remove("open-popup");
+		}
+	</script>
+
+</body>
+</html>
